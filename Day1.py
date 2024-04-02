@@ -8,11 +8,18 @@
 # num = int(len(name))
 # print(num)
 
-a= input()
-b= input()
+# a= input()
+# b= input()
 
-temp=a
-a=b
-b=temp
+# temp=a
+# a=b
+# b=temp
 
-print(a +" "+ b)
+# print(a +" "+ b)
+
+#Day 1 project- Band Name Generator
+
+city = input("Enter Your City\n")
+pet = input("Enter Your Pet's Name\n")
+
+print("your Band Name is: " + city+" "+pet)
