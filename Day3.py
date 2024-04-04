@@ -1,4 +1,5 @@
 # Day 3 Project- Finding the treasure
+# concept learnt - If else elif 
 
 print("Welcome to the treasure island\nYour mission is to find the treasure\nYou are on a cross road where would you want to go type 'left' or 'right'")
 leftOrRight = input()
