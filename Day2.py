@@ -2,6 +2,7 @@
 # print(type(a))
 
 # Day 2 Project: tip Calculator
+# concept learnt - Mathematical operators and formatted string
 
 print("Welcome to the Tip Calculator")
 totalBill = int(input("What was the Total Bill?\n₹"))
