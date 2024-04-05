@@ -30,6 +30,7 @@ import random
 word_list = ["aardvark", "baboon", "camel"]
 randomWord = word_list[random.randint(0, 2)]
 dashArray = []
+correctGuess = False
 
 # Initialize dashArray with underscores
 for i in range(0, len(randomWord)):
@@ -37,19 +38,22 @@ for i in range(0, len(randomWord)):
 
 # Keep looping until all letters are guessed
 while "_" in dashArray:
-    guess = input("Guess a letter: ").lower()
+    guess = input("\nGuess a letter: ").lower()
     
 
     # Check if the guessed letter matches any letter in the randomWord
     for i in range(0, len(randomWord)):
         if guess == randomWord[i]:
             dashArray[i] = guess
-            print(dashArray)
-        else:
-            print("incorrect guess!")
-            break    
-
-print("Congratulations! You guessed the word:", randomWord)
+            correctGuess = True
+                
+    if correctGuess:
+        for letter in dashArray:
+            print(letter, end=" ")
+        correctGuess=False
+    else:
+        print("incorrect guess")    
+print("\nCongratulations! You guessed the word:", randomWord)
 
 
 
