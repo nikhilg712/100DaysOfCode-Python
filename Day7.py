@@ -31,13 +31,14 @@ word_list = ["aardvark", "baboon", "camel"]
 randomWord = word_list[random.randint(0, 2)]
 dashArray = []
 correctGuess = False
+lives = 6
 
 # Initialize dashArray with underscores
 for i in range(0, len(randomWord)):
     dashArray.append("_")
 
 # Keep looping until all letters are guessed
-while "_" in dashArray:
+while lives!=0:
     guess = input("\nGuess a letter: ").lower()
     
 
@@ -52,8 +53,12 @@ while "_" in dashArray:
             print(letter, end=" ")
         correctGuess=False
     else:
-        print("incorrect guess")    
-print("\nCongratulations! You guessed the word:", randomWord)
+        lives = lives-1
+        print(f"incorrect guess {lives} remaining!") 
+if lives==0:
+    print("Hanged")
+else:
+    print("\nCongratulations! You guessed the word:", randomWord)
 
 
 
