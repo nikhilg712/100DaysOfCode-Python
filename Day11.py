@@ -8,12 +8,18 @@ firstCards = [cards[random.randint(0,12)],cards[random.randint(0,12)]]
 computerCards = [cards[random.randint(0,12)],cards[random.randint(0,12)]]
 
 total =0
-
+totalComputer=0
 def myCardSum(cardList):
     global total
     for card in cardList:
         total=total+card
-    return total    
+    return total  
+
+def computerCardSum(computerCardList):
+    global totalComputer
+    for card in computerCardList:
+        totalComputer+=card
+    return totalComputer      
 
 def firstHit():
     print(f"Your Cards are: {firstCards}. Current Score: {myCardSum(firstCards)}")
@@ -38,7 +44,7 @@ def hit():
         firstHit()
 
 def hitOrPass():
-    global total
+    global total, firstCards, computerCards
     hitPass =input("Type 'Y' to get another card or 'N' to Pass")
     if hitPass == 'Y':
         firstCards.append(cards[random.randint(0,12)])
